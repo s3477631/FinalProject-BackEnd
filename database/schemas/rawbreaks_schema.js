@@ -21,7 +21,8 @@ const rawSchema = new mongoose.Schema({
     floaters: { 
         type: Number, 
         required: true
-    }
+    },
+    breaks: [BreakSchema]
 })
 
 
