@@ -1,5 +1,6 @@
 const mongoose = require ("mongoose")
 const Schema = mongoose.Schema
+const BreakSchema = require('./transformedBreakSchema')
 
 const RawSchema = new Schema({ 
     start: { 
@@ -21,7 +22,8 @@ const RawSchema = new Schema({
     floaters: { 
         type: Number, 
         required: true
-    }
+    },
+    breaks: [BreakSchema]
 })
 
 module.exports = RawSchema
